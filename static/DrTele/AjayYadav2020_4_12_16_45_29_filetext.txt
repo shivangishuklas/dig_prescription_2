@@ -1,0 +1,26 @@
+HOSPITAL NAME: Televitals
+DOCTOR NAME: Dr Tele
+DOCTOR ADDRESS: Cabin 37, Super Speciality Hospitals, Pratapganj,
+New Delhi, Delhi, 110346
+Phone: 1234567890
+
+
+PATIENT NAME: Ajay Yadav
+PATIENT AGE: 51 yrs
+PATIENT SEX: 
+
+
+SYMPTOMS
+headache and body pain for past 3 days he also has 
+
+DIAGNOSIS
+acute bronchitis bronchitis 
+
+PRESCRIPTION
+ibuprofen 
+crocin 
+
+
+ADVICE
+two times a day for five days in a row i also advise him to take some rest and drink enough fluid
+

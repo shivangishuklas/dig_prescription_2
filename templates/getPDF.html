@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TeleVital</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+    
+    <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="static/css/aos.css">
+
+    <link rel="stylesheet" href="static/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="static/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="static/css/flaticon.css">
+    <link rel="stylesheet" href="static/css/icomoon.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+
+
+  <body>
+    
+    <div class="hero-wrap js-fullheight">
+      <div class="overlay"></div>
+      <div id="particles-js"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-6 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+             <p><font color="white" style="font-size:60px">TeleVital</font></p>
+                  <p><font color="white" style="font-size:20px">Enhancing the quality of contactless measurement</font></p>
+               <center>
+                   <p id="patientnameholder">{{ patient_name }}</p>
+      <p id="patientpathholder">{{ path }}</p>
+      <p id="textfilepathholder">{{ path_txt }}</p>
+      
+      <br>
+      <a href="{{ path }}" target=”_blank” style="color:black; margin-right:1%">View Pdf</a>
+      <a href="{{ path }}"  download = "{{ download_name }}" style="color:black; margin-left:1%">Download PDF</a>
+
+      <br><br>
+      <form action="{{ url_for('sendEmail') }}" id="email_form" method="post" onsubmit="myFunction()">
+        <input type="text" id="email_box" name="email_box"/>
+        <input type="text" id="email_patient_name" name="email_patient_name"/>
+        <input type="text" id="path_holder" name="path_holder"/>
+        <input id="sub" type="submit" value="Send Email"/>
+      </form>
+
+      <p><a href="{{ url_for('index') }}" class="btn btn-primary mt-3 py-3 px-5">Home</a></p>
+                
+      </center>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      $(document).ready(function(){
+        $('#email_patient_name').hide();
+        $('#path_holder').hide();
+        $('#patientnameholder').hide();
+        $('#patientpathholder').hide();
+        $('#textfilepathholder').hide();
+      
+      });
+
+      function myFunction() {
+        var inp_email_patient_name = document.getElementById("email_patient_name");
+        inp_email_patient_name.value = document.getElementById("patientnameholder").innerHTML;
+
+        var inp_path_holder = document.getElementById("path_holder");
+        inp_path_holder.value = document.getElementById("patientpathholder").innerHTML;
+
+      }
+    </script>
+
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="static/js/popper.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <script src="static/js/jquery.easing.1.3.js"></script>
+  <script src="static/js/jquery.waypoints.min.js"></script>
+  <script src="static/js/jquery.stellar.min.js"></script>
+  <script src="static/js/owl.carousel.min.js"></script>
+  <script src="static/js/jquery.magnific-popup.min.js"></script>
+  <script src="static/js/aos.js"></script>
+  <script src="static/js/jquery.animateNumber.min.js"></script>
+  <script src="static/js/bootstrap-datepicker.js"></script>
+  <script src="static/js/jquery.timepicker.min.js"></script>
+  <script src="static/js/particles.min.js"></script>
+  <script src="static/js/particle.js"></script>
+  <script src="static/js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="static/js/google-map.js"></script>
+  <script src="static/js/main.js"></script>
+    
+
+
+  </body>
+</html>
